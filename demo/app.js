@@ -1,3 +1,4 @@
+/* global crudRequest */
 var app = {
     init: function () {
         this.cacheVars();

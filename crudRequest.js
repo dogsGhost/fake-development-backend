@@ -37,13 +37,13 @@ function crudRequest(fileName, callback, postData) {
         if (!callback) {
             callback = function (request) {
                 console.log(request.responseText);
-            }
+            };
         }
 
         // Otherwise everything went ok and we can send our request to the callback.
         callback(request);
-    }
+    };
 
     // Send postData if it was passed initially otherwise just send the file reference.
-    postData ? request.send(file + '&data=' + postData) : request.send(file);    
+    return postData ? request.send(file + '&data=' + postData) : request.send(file);    
 }
